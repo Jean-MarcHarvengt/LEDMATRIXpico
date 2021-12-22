@@ -1,0 +1,85 @@
+//AOF_NONE      0x00
+//AOF_SCROLL    0x01
+//AOF_BOUNCE    0x02
+//AOF_SLIDE     0x04
+//AOF_SINE      0x08 
+//AOF_FLASH     0x10
+//AOF_HCENTER   0x20 
+//AOF_VCENTER   0x40
+//AOF_HV        0x80
+// raster height,  xoffset,yoffset, speed, AOFs(0xVV), amp, phase, R/G/B/Y/M/C
+// text fntheight, xoffset,yoffset, speed, AOFs(0xVV), r,g,b, amp, phase, textdata 
+// gif             xoffset,yoffset, speed, AOFs(0xVV), amp, phase, gifname 
+begin start3
+raster 16, 0,0, 0, 0x48, 0,0, G
+text 8, 0,0,  0, 0x44, 0,100,100, 0,0, 3
+end 1
+begin start2
+raster 16, 0,0, 0, 0x48, 0,0, G
+text 8, 0,0,  0, 0x44, 0,150,150, 0,0, 2
+end 1
+begin start1
+raster 16, 0,0, 0, 0x48, 0,0, G
+text 8, 0,0,  0, 0x44, 0,200,200, 0,0, 1
+end 1
+begin startgo
+raster 16, 0,0, 0, 0x48, 0,0, G
+text 8, 0,0,  0, 0x54, 255,255,255, 0,0, go!
+end 3
+begin snowman
+gif 0,0, 1, 0x43, 22,0, snowman128.gif
+end 20
+begin potion1
+raster 16, 0,0, 0, 0x42, 8,0, B
+gif 0,0, 1, 0x43, 4,0, potion16.gif
+gif -10,0, 1, 0x43, 4,4, potion16.gif
+gif -20,0, 1, 0x43, 4,8, potion16.gif
+text 8, 0,4,  0, 0x01, 255,255,0, 0,0, Don't drink too much!!!
+end 10
+begin sliding
+text 8, 0,0,  0, 0x14, 0,200,200, 0,0, Nice
+text 8, 0,8,  1, 0x14, 200,200,0, 0,0, Xmas
+end 5
+begin presents
+raster 4, 0,4, 0, 0x02, 8,0, R
+raster 4, 0,4, 0, 0x02, 8,4, G
+raster 4, 0,4, 0, 0x02, 8,8, B
+gif 0,0, 0, 0x43, 4,0, potion16.gif
+gif -16,0, 0, 0x43, 4,4, coin16.gif
+gif -32,0, 0, 0x43, 4,8, crystal16.gif
+gif -48,0, 0, 0x43, 4,12, candy16.gif
+gif -64,0, 0, 0x43, 4,14, present16.gif
+end 4
+begin scroll1
+raster 16, 0,0, 0, 0x40, 0,0, B
+text 8, 0,0,  0, 0x01, 255,255,255, 0,0, Stop dumping your trash in front of the house!!!
+text 8, 0,8,  1, 0x14, 255,255,0, 0,0, GO!!
+end 15
+begin tree
+gif 0,0, 1, 0xA3, 4,0, tree32.gif
+end 15
+begin scrollsine
+raster 16, 0,0, 0, 0x08, 0,0, R
+text 8, 0,4, 0, 0x0B, 255,255,0, 4,0, Merry Christmas and Happy New Year!
+end 10
+begin snowmankiss
+gif 0,0, 1, 0xA3, 8,0, snowman50.gif
+end 5
+begin cherish
+raster 16, 0,0, 0, 0x08, 0,0, G
+text 8, 0,0, 0, 0x49, 255,255,0, 0,0, Cherish each others!
+end 10
+begin santa
+raster 16, 0,0, 0, 0x08, 0,0, B
+gif 0,0, 0, 0x43, 8,0, pernotrans150.gif
+end 20
+begin greetings
+raster 4, 0,4, 0, 0x02, 8,0, R
+raster 4, 0,4, 0, 0x02, 8,2, G
+raster 4, 0,4, 0, 0x02, 8,4, B
+raster 4, 0,4, 0, 0x02, 8,6, C
+raster 4, 0,4, 0, 0x02, 8,8, Y
+raster 4, 0,4, 0, 0x02, 8,10, M
+text 8, 0,4, 0, 0x01, 255,255,255, 0,0, Enjoy these animations!
+end 10
+
